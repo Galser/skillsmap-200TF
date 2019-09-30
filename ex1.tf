@@ -17,3 +17,11 @@ resource "aws_instance" "web0" {
     "learntag"  = "200tf"
   }
 }
+
+output "web0_public_ip" {
+  value = "${aws_instance.web0.public_ip}"
+}
+
+output "web0_public_dns" {
+  value = "${aws_instance.web0.public_dns}"
+}
