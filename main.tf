@@ -16,10 +16,10 @@ module "mweb" {
   
 }
 
-output "mod_web0_public_ip" {
+output "public_ip" {
   value = "${module.mweb.public_ip}"
 }
 
-output "mod_web0_public_dns" {
+output "public_dns" {
   value = "${module.mweb.public_dns}"
 }
