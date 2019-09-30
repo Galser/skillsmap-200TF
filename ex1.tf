@@ -1,6 +1,6 @@
 provider "aws" {
   profile = "default"
-  region  = var.region
+  region  = "${var.region}"
 }
 
 resource "aws_instance" "web0" {
@@ -11,10 +11,10 @@ resource "aws_instance" "web0" {
   vpc_security_group_ids = ["sg-04c059aea335d8f69"]
 
   tags = {
-    "Name" = "web0",
+    "Name"      = "web0",
     "Identity"  = "goose",
     "andriitag" = "true",
-    "learntag"  = "200tf"
+    "learntag"  = "${var.learntag}"
   }
 }
 
